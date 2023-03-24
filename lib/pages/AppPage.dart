@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:zhihu_daily/pages/article/ArticlePage.dart';
+import 'package:zhihu_daily/pages/article/article_page.dart';
 
 class AppPage {
   static final pages = [
