@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:zhihu_daily/pages/AppPage.dart';
 import 'package:zhihu_daily/pages/home/Home.dart';
+import 'package:zhihu_daily/pages/home/HomeBinding.dart';
 
 void main() {
   runApp(
@@ -17,6 +18,7 @@ void main() {
           )
         ),
         initialRoute: '/',
+        initialBinding: HomeBinding(),
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),

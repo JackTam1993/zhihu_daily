@@ -3,21 +3,20 @@ import 'package:get/get.dart';
 
 import 'HomeController.dart';
 
-class Home extends StatelessWidget {
+class Home extends GetView<HomeController> {
   const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final HomeController c = Get.put(HomeController());
-
     return Scaffold(
-      body: GetBuilder<HomeController>(
-          builder: (_) {
-            return Obx(() => Text("${c.count}"));
-          }
+      appBar: AppBar(
+        title: const Text("知乎日报"),
       ),
+      body: Obx(() => Text("${controller.count}")),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => c.increment(),
+        onPressed: () {
+          controller.increment();
+        },
         child: const Icon(Icons.navigation),
       ),
     );
