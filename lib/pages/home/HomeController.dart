@@ -34,7 +34,7 @@ class HomeController extends GetxController {
   var count = 0.obs;
   increment() => count++;
 
-  var storiesObx = [].obs;
+  RxList<Story> storiesObx = <Story>[].obs;
 
   @override
   void onInit() async {

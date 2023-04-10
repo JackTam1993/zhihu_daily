@@ -16,6 +16,8 @@ class Home extends GetView<HomeController> {
           itemCount: controller.storiesObx.length,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
+              contentPadding: const EdgeInsets.all(8.0),
+              leading: Image.network(controller.storiesObx[index].images[0]),
               title: Text(controller.storiesObx[index].title)
             );
           }
