@@ -12,7 +12,15 @@ class Home extends GetView<HomeController> {
       appBar: AppBar(
         title: const Text("知乎日报"),
       ),
-      body: Obx(() => Text("${controller.count}")),
+      body: Obx(() => ListView.builder(
+          itemCount: controller.storiesObx.length,
+          itemBuilder: (BuildContext context, int index) {
+            return ListTile(
+              title: Text(controller.storiesObx[index].title)
+            );
+          }
+        )
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           controller.increment();

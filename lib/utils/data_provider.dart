@@ -6,7 +6,7 @@ import 'package:dio/dio.dart';
 abstract class DataProvider {
 
   static Future<Response> getLatestArticle() async {
-    Response<dynamic> response = await Request().get(Api.LATEST, {});
+    Response response = await Request().get(Api.LATEST, {});
 
     return response;
   }
