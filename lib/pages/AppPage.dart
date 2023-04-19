@@ -5,7 +5,8 @@ class AppPage {
   static final pages = [
     GetPage(
         name: Route.ARTICLE,
-        page: () => const ArticlePage()
+        page: () => const ArticlePage(),
+        transition: Transition.cupertino
     )
   ];
 }

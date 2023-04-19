@@ -44,4 +44,6 @@ class HomeController extends GetxController {
     List<Story> stories = handleFetchData(myFetchedData);
     storiesObx.value = stories;
   }
+
+
 }
