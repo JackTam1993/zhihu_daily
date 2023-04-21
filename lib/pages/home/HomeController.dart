@@ -20,6 +20,7 @@ class HomeController extends GetxController {
 
     for(var i = 0; i < storiesList.length; i++) {
       Story story = Story(
+          id: storiesList[i]["id"],
           title: storiesList[i]["title"],
           url: storiesList[i]["url"],
           hint: storiesList[i]["hint"],

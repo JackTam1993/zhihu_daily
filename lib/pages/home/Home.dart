@@ -17,9 +17,12 @@ class Home extends GetView<HomeController> {
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
               contentPadding: const EdgeInsets.all(8.0),
-              leading: Image.network(controller.storiesObx[index].images[0]),
+              leading: Hero(
+                  tag: controller.storiesObx[index].id,
+                  child: Image.network(controller.storiesObx[index].images[0])
+              ),
               title: Text(controller.storiesObx[index].title),
-              onTap: () => Get.toNamed('/article'),
+              onTap: () => Get.toNamed('/article', arguments: controller.storiesObx[index].id),
             );
           }
         )

@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:zhihu_daily/pages/article/article_binding.dart';
 import 'package:zhihu_daily/pages/article/article_page.dart';
 
 class AppPage {
@@ -6,6 +7,7 @@ class AppPage {
     GetPage(
         name: Route.ARTICLE,
         page: () => const ArticlePage(),
+        binding: ArticleBinding(),
         transition: Transition.cupertino
     )
   ];
